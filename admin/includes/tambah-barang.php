@@ -47,8 +47,8 @@
       </div>
       <div class="col-md-4">
  <div class="form-group">
-   <label for="keterangan">Keterangan</label>
-   <textarea class="form-control" name="keterangan" placeholder="(Opsional)"></textarea>
+   <label for="Keterangan">Keterangan</label>
+   <textarea class="form-control" name="ket" placeholder="(Opsional)"></textarea>
  </div>
       </div>
       <div class="col-md-4">
