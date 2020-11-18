@@ -1,3 +1,12 @@
+<?php
+ if (isset($_SESSION['pesan'])) {
+    echo $_SESSION['pesan'];
+    unset($_SESSION['pesan']);
+ }
+  
+?>
+
+
 <div class="container mt-5">
  
   <h2>Tambah Data Barang</h2>
@@ -32,20 +41,20 @@
     <div class="row">
       <div class="col-md-4">
  <div class="form-group">
-   <label for="jenis">Kondisi Barang</label>
+   <label for="kondisi">Kondisi Barang</label>
    <input type="text" name="kondisi" class="form-control" required placeholder="Contoh: Baik">
  </div>
       </div>
       <div class="col-md-4">
  <div class="form-group">
-   <label for="ket">Keterangan</label>
+   <label for="Keterangan">Keterangan</label>
    <textarea class="form-control" name="ket" placeholder="(Opsional)"></textarea>
  </div>
       </div>
       <div class="col-md-4">
  <div class="form-group">
-   <label for="ket">id_lab</label>
-   <textarea type="number" name="jumlah" min="1" placeholder="Minimal 1" class="form-control" required></textarea>
+   <label for="id_lab">id lab</label>
+   <input type="text" name="id_lab" class="form-control" required placeholder="Contoh: Baik">
  </div>
       </div>
       <div class="col-md-4">
