@@ -25,5 +25,4 @@
       <p>Petugas : <?= $data['nama'] ?></p>
     </div>
   </div>
-
 </div>

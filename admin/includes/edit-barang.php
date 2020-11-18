@@ -1,5 +1,4 @@
 <div class="container mt-5">
- 
   <h2>Ubah Data Barang</h2>
   <hr>
 

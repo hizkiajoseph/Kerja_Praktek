@@ -30,3 +30,4 @@ if ($update) {
 } else {
   header('Location: ../data-barang.php?h=edit-barang');
 }
+?>
