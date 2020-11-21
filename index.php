@@ -3,9 +3,9 @@
 <head>
   	<meta charset="utf-8">
   	<title>Lab Keperawatan</title>
-  <!-- CSS -->
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="TEXT/css" href="style/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <!-- CSS -->
+  	<link rel="stylesheet" type="TEXT/css" href="style/css/bootstrap.min.css">
 </head>
 <body>
 

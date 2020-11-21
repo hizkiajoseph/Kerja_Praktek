@@ -45,7 +45,7 @@
           <h5 class="card-title">Data Petugas</h5>
           <p class="card-text">Jumlah petugas saat ini</p>
           <h3><?= $opt['jmlOpt']; ?></h3>
-          <a href="data-petugas.php" class="card-link">Lihat Data Petugas</a>
+          <a href="data-staff.php" class="card-link">Lihat Data Petugas</a>
         </div>
       </div>
     </div>
