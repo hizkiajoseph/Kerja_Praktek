@@ -18,14 +18,14 @@ $query = $conn->query($sql);
 $result = $query->fetch_assoc();
 var_dump($result);
 
-if($query->num_rows > 0) {
+if($query->num_rows > 1) {
   $_SESSION['name'] = $result['nama'];
   $_SESSION['id_user'] = $result['id_user'];
 
   if($result['id_level'] == 1) {
     header('Location: ../admin/index.php');
   } else {
-    header('Location: ../operator/index.php');
+    header('Location: ../staff/index.php');
   }
 } else {
   $_SESSION['error'] = "Data yang anda masukan salah   , silahkan coba lagi";

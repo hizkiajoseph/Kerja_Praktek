@@ -5,7 +5,7 @@
 
   <h2>Data Barang</h2>
   <hr>
-
+  Petugas : <?= $_SESSION['name'] ?>
   <a href="index.php" class="btn btn-primary btn-sm float-left">← Kembali</a>
   <a href="?p=tambah-barang" class="btn btn-primary btn-sm float-right">Tambah Data</a>
 

@@ -42,7 +42,7 @@
           <label for="level">Sebagai</label>
           <select name="level" class="form-control">
             <option value="">-- Masuk Sebagai ---</option>
-            <option value="2">Operator</option>
+            <option value="2">Staff</option>
             <option value="1">Admin</option>
           </select>
         </div>
