@@ -8,6 +8,22 @@
     <div class="col-md-6">
      <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" class="mt-3" autocomplete="off">
       <div class="form-group">
+       <label for="id_barang">Jenis Barang</label>
+       <input list="barang" name="nama_barang" placeholder="Pilih barang" class="form-control" required>
+       <datalist id="barang">
+   
+        <?php 
+        foreach ($data_barang as $barang): 
+         $daftar = $barang['nama_barang'].' - '.$barang['jenis'];
+        ?>
+   
+        <option value="<?= $daftar ?>">
+   
+        <?php endforeach ?>
+   
+       </select>
+      </div>
+      <div class="form-group">
        <label for="id_barang">Nama Barang</label>
        <input list="barang" name="nama_barang" placeholder="Pilih barang" class="form-control" required>
        <datalist id="barang">

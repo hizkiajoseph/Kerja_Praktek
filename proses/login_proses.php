@@ -18,7 +18,7 @@ $query = $conn->query($sql);
 $result = $query->fetch_assoc();
 var_dump($result);
 
-if($query->num_rows > 1) {
+if($query->num_rows > 0) {
   $_SESSION['name'] = $result['nama'];
   $_SESSION['id_user'] = $result['id_user'];
 
