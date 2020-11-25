@@ -15,16 +15,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../admin/index.php">Dashboard <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../admin/index.php">Laboratorium Fakultas Keperawatan<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../admin/data-barang.php">Barang</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../admin/data-staff.php">Petugas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../admin/data-peminjaman.php">Peminjaman</a>
+        <li class="nav-item left">
+          <a class="nav-link btn btn-danger btn-sm text-white" href="logout.php">Keluar</a>
         </li>
       </ul>
     </div>
