@@ -3,11 +3,16 @@
     echo $_SESSION['pesan'];
     unset($_SESSION['pesan']);
  }
+
+
+
 ?>
 
 <div class="container mt-5">
- 
+
+
   <h2>Tambah Data Barang</h2>
+
   <hr>
 
   <a href="data-barang.php" class="btn btn-primary btn-sm float-left">← kembali</a>
@@ -51,7 +56,7 @@
       </div>
       <div class="col-md-4">
  <div class="form-group">
-   <label for="id_lab">id lab</label>
+   <label for="id_lab">id label</label>
    <input type="text" name="id_lab" class="form-control" required placeholder="Contoh: Baik">
  </div>
       </div>

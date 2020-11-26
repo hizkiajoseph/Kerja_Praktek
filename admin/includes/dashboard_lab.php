@@ -15,7 +15,7 @@
             <h5 class='card-title'>$lab[nama_lab]</h5>
             <p class='card-text'>Jumlah barang saat ini</p>
             <h3>$barang[jumlah]</h3>
-            <a href='data-barang.php?id=$lab[id_lab]' class='card-link'>Lihat Data Barang</a>
+            <a href='data-barang.php?id_lab=$lab[id_lab]' class='card-link'>Lihat Data Barang</a>
             </div>
             </div>
             </div>";

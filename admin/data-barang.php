@@ -7,7 +7,7 @@ if (!isset($_SESSION['id_user'])) {
 }
 
 // Mengelurkan seluruh data barang yang ada di Database
-$sql = "SELECT * FROM barang LEFT JOIN user ON barang.id_user = user.id_user";
+$sql = "SELECT * FROM barang WHERE id_lab='".$_GET['id_lab']."'";
 $query = $conn->query($sql);
 $data_barang = $query->fetch_all(MYSQLI_ASSOC);
 
@@ -36,3 +36,4 @@ if (!isset($_GET['p'])) {
 }
 
 require_once 'includes/footer.php';
+?>
