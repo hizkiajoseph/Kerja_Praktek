@@ -18,7 +18,13 @@
       <div class="col-md-4">
  <div class="form-group">
    <label for="jenis">Jenis Barang</label>
-   <input type="text" name="jenis" class="form-control" required placeholder="Contoh: Kayu">
+    <form>
+      <select class="form-control" name="jenis">
+        <option value="Sekali Pakai">Sekali Pakai</option>
+        <option value="Berkali-kali">Berkali-kali</option>
+      </select>
+    </form>
+   
  </div>
       </div>
       <div class="col-md-4">
@@ -35,7 +41,13 @@
       <div class="col-md-4">
  <div class="form-group">
    <label for="kondisi">Kondisi Barang</label>
-   <input type="text" name="kondisi" class="form-control" required placeholder="Contoh: Baik">
+    <form>
+      <select class="form-control" name="kondisi">
+        <option value="Baik">Baik</option>
+        <option value="Rusak">Rusak</option>
+        <option value="Hilang">Hilang</option>
+      </select>
+    </form>
  </div>
       </div>
       <div class="col-md-4">
@@ -45,10 +57,6 @@
  </div>
       </div>
       <div class="col-md-4">
- <div class="form-group">
-   <label for="id_lab">id label</label>
-   <input type="text" name="id_lab" class="form-control" required placeholder="Contoh: Baik">
- </div>
       </div>
       <div class="col-md-4">
  <button type="submit" name="simpan" class="btn btn-success btn-sm" style="margin-top:32px; width:100%;"><b>Simpan</b></button>

@@ -15,16 +15,10 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="../admin/index.php">Dashboard <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="../admin/index.php">Laboratorium Keperawatan<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../admin/data-barang.php?id_lab=<?php echo$_GET['id_lab'];?>">Barang</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../admin/data-petugas.php?id_lab=<?php echo$_GET['id_lab'];?>">Petugas</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../admin/data-peminjaman.php">Data Peminjaman</a>
+					<a class="nav-link btn btn-danger btn-sm text-white" href="logout.php">Keluar</a>
 				</li>
 			</ul>
 		</div>

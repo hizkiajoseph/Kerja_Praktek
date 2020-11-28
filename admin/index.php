@@ -9,6 +9,6 @@ if(!isset($_SESSION['id_user'])) {
 	header('Location: ../index.php');
 }
 
-require_once 'includes/header.php';
+require_once 'includes/header-dasboard.php';
 require_once 'includes/dashboard.php';
 require_once 'includes/footer.php';

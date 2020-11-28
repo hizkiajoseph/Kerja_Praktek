@@ -14,7 +14,7 @@ $data_peminjaman = $query->fetch_all(MYSQLI_ASSOC);
 // Nomor untuk increment baris tabel
 $no = 1;
 
-
+require_once 'includes/header-dasboard.php';
 require_once 'includes/header.php';
 
 if(!isset($_GET['act'])) {
