@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-=======
-<?php
- if (isset($_SESSION['pesan'])) {
-    echo $_SESSION['pesan'];
-    unset($_SESSION['pesan']);
- }
-
-
-
-?>
-
->>>>>>> 89f3e7e14f9c3a2625855e7eadd7f745fce73608
 <div class="container mt-5">
 
 
