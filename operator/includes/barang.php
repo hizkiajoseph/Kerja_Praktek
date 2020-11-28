@@ -4,8 +4,7 @@
 	<hr>
 
 	<a href="index.php" class="btn btn-primary btn-sm float-left">&larr; Kembali</a>
-	<a href="?p=tambah-barang&id_lab= <?php echo$_GET['id_lab'];  ?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
-
+	
 	<div class="clearfix"></div>
 
 	<table class="table table-sm mt-3">
@@ -17,7 +16,6 @@
 				<th>Jumlah</th>
 				<th>Jenis</th>
 				<th>Tgl. Regis</th>
-				<th>Aksi</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -29,13 +27,6 @@
 				<td><?= $barang['jumlah']; ?>
 				<td><?= $barang['jenis']; ?>
 				<td><?= $barang['tgl_regis']; ?>
-				<td>
-					<div class="d-inline">
-						<a href="?p=detail-barang&id=<?= $barang['id_barang']; ?>&id_lab=<?= $barang['id_lab']; ?>" class="btn btn-primary btn-sm">Detail</a>
-						<a href="?p=edit-barang&id=<?= $barang['id_barang']; ?>&id_lab=<?= $barang['id_lab']; ?>" class="btn btn-success btn-sm">Edit</a>
-						<a href="?p=hapus-barang&id=<?= $barang['id_barang']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Hapus data ini?')">Hapus</a>
-					</div>
-				</td>
 			</tr>
 			<?php endforeach; ?>
 		</tbody>

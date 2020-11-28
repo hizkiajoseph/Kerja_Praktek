@@ -14,16 +14,6 @@ $data_peminjaman = $query->fetch_all(MYSQLI_ASSOC);
 // Nomor untuk increment baris tabel
 $no = 1;
 
-
 require_once 'includes/header.php';
-
-if(!isset($_GET['act'])) {
-	require_once 'includes/detail-peminjaman.php';
-} else {
-	if($_GET['act'] == 'cetak') {
-		require_once 'includes/cetak-data-peminjaman.php';
-	} else {
-		require_once 'includes/detail-peminjaman.php';
-	}
-}
+require_once 'includes/detail-peminjaman.php';
 require_once 'includes/footer.php';

@@ -1,16 +1,11 @@
-<?php
- if (isset($_SESSION['pesan'])) {
-    echo $_SESSION['pesan'];
-    unset($_SESSION['pesan']);
- }
-?>
-
 <div class="container mt-5">
- 
+
+
   <h2>Tambah Data Barang</h2>
+
   <hr>
 
-  <a href="data-barang.php" class="btn btn-primary btn-sm float-left">← kembali</a>
+  <a href="javascript:history.go(-1)" class="btn btn-primary btn-sm float-left">← kembali</a>
   <div class="clearfix"></div>
 
   <form action="proses/proses-tambah-barang.php" method="POST" class="mt-3" autocomplete="off">
@@ -51,7 +46,7 @@
       </div>
       <div class="col-md-4">
  <div class="form-group">
-   <label for="id_lab">id lab</label>
+   <label for="id_lab">id label</label>
    <input type="text" name="id_lab" class="form-control" required placeholder="Contoh: Baik">
  </div>
       </div>

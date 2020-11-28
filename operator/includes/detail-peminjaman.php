@@ -1,13 +1,6 @@
 <div class="container mt-5">
-
-	<div class="row">
-		<div class="col">
-			<h2>Data Peminjaman</h2>
-		</div>
-		<div class="col">
-			<a href="data-peminjaman.php?act=cetak" target="_blank"><button class="btn btn-primary float-right">Cetak</button></a>
-		</div>
-	</div>	
+	
+	<h2>Data Peminjaman</h2>
 
 	<div class="clearfix"></div>
 

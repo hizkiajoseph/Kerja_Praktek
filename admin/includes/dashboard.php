@@ -1,54 +1,28 @@
 <div class="container mt-5">
 
-  <div class="row text-center">
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
+	<div class="row text-center">
  
           <?php 
-          $sql = $conn->query("SELECT COUNT(*) AS jmlPinjam FROM detail_pinjaman");
-          $pinjam = $sql->fetch_assoc();
-          ?>
+          $sql = $conn->query("SELECT * FROM laboratorium");
 
-          <h5 class="card-title">Data Peminjaman</h5>
-          <p class="card-text">Data barang yang dipinjam</p>
-          <h4><?= $pinjam['jmlPinjam']; ?></h4>
-          <a href="data-peminjaman.php" class="card-link">Lihat Data Peminjaman</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
- 
-          <?php 
-          $sql = $conn->query("SELECT COUNT(*) AS jmlBarang FROM barang");
-          $barang = $sql->fetch_assoc();
-          ?>
- 
-          <h5 class="card-title">Data Barang</h5>
-          <p class="card-text">Jumlah barang saat ini</p>
-          <h3><?= $barang['jmlBarang']; ?></h3>
-          <a href="data-barang.php" class="card-link">Lihat Data Barang</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
- 
-          <?php 
-          $sql = $conn->query("SELECT COUNT(*) AS jmlOpt FROM user WHERE id_level = 1");
-          $opt = $sql->fetch_assoc();
-          ?>
-
-          <h5 class="card-title">Data Petugas</h5>
-          <p class="card-text">Jumlah petugas saat ini</p>
-          <h3><?= $opt['jmlOpt']; ?></h3>
-          <a href="data-staff.php" class="card-link">Lihat Data Petugas</a>
-        </div>
-      </div>
-    </div>
-  </div>
+          while ($lab = $sql->fetch_assoc()) { 
+            $sqlbarang = $conn->query("SELECT count(*) AS jumlah FROM barang WHERE id_lab = '$lab[id_lab]'");
+            $barang = $sqlbarang->fetch_assoc();
+            echo "
+            <div class='col-md-4'>
+            <div class='card' style='width: 18rem;''>
+            <div class='card-body'>
+            <h5 class='card-title'>$lab[nama_lab]</h5>
+            <p class='card-text'>Jumlah barang saat ini</p>
+            <h3>$barang[jumlah]</h3>
+            <a href='data-barang.php?id_lab=$lab[id_lab]' class='card-link'>Lihat Data Barang</a>
+            </div>
+            </div>
+            </div>";
+          }
+          ?>          
+   
+      
+  	</div>
 
 </div>
