@@ -14,6 +14,7 @@ $data_barang = $query->fetch_all(MYSQLI_ASSOC);
 // Nomor untuk increment baris tabel
 $no = 1;
 
+require_once 'includes/header_lab.php';
 require_once 'includes/header.php';
 if (!isset($_GET['p'])) {
 	require_once 'includes/barang.php';	
@@ -32,5 +33,10 @@ if (!isset($_GET['p'])) {
 		header('Location: data-barang.php');
 	}
 
+<<<<<<< HEAD
 }
 require_once 'includes/footer.php';
+=======
+require_once 'includes/footer.php';
+?>
+>>>>>>> 89f3e7e14f9c3a2625855e7eadd7f745fce73608
