@@ -128,20 +128,20 @@
 							<div class="row">
 								<div class="form-row">
 									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="peminjam">Peminjam</label>
-										<input class="form-control" type="text" name="peminjam" id="peminjam" placeholder="Masukan Nama" required>
+										<label for="nama_peminjam">Peminjam</label>
+										<input class="form-control" type="text" name="nama_peminjam" id="nama_peminjam" placeholder="Masukan Nama" required>
 									</div>
 									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="peminjam">NIM</label>
-										<input class="form-control" type="text" name="nim" id="nim" placeholder="Masukan NIM" required>
+										<label for="nim_peminjam">NIM</label>
+										<input class="form-control" type="text" name="nim_peminjam" id="nim_peminjam" placeholder="Masukan NIM" required>
 									</div>
 									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="peminjam">Nomor Telpon</label>
-										<input class="form-control" type="text" name="nomor" id="nomor" placeholder="Masukan Nomor Telpon" required>
+										<label for="nomor_peminjam">Nomor Telpon</label>
+										<input class="form-control" type="text" name="nomor_peminjam" id="nomor_peminjam" placeholder="Masukan Nomor Telpon" required>
 									</div>
 									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="peminjam">Mata Kuliah</label>
-										<input class="form-control" type="text" name="mk" id="mk" placeholder="Masukan Mata Kuliah" required>
+										<label for="mk_peminjam">Mata Kuliah</label>
+										<input class="form-control" type="text" name="mk_peminjam" id="mk_peminjam" placeholder="Masukan Mata Kuliah" required>
 									</div>
 								</div>
 								<div class="clearfix"></div>

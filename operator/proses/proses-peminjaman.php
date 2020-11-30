@@ -17,15 +17,15 @@ if(isset($_POST['submit']) && isset($_SESSION['list_peminjaman'])) {
 
 		$tgl_peminjaman = date('Y-m-d');
 		//$tgl_pengembalian = $_POST['tgl-pengembalian'];
-		$peminjam = $_POST['nama_peminjam'];
-		$nim = $_POST['nim_peminjam'];
-		$nomor = $_POST['nomor_peminjam'];
-		$mk	=	$_POST['mk_peminjam'];
+		$nama_peminjam = $_POST['nama_peminjam'];
+		$nim_peminjam = $_POST['nim_peminjam'];
+		$nomor_peminjam = $_POST['nomor_peminjam'];
+		$mk_peminjam	=	$_POST['mk_peminjam'];
 		$id_user = $_POST['id_user'];
 
-		$peminjaman = $conn->query("INSERT INTO peminjaman VALUES ('', '$id_user', '$tgl_peminjaman', '$tgl_pengembalian')");
+		$peminjaman = $conn->query("INSERT INTO peminjaman VALUES ('', '$id_user', '$tgl_peminjaman')");
 
-		$detail_pinjam = $conn->query("INSERT INTO detailpinjam VALUES ('', '$list[id_barang]', '$list[jumlah_pinjam]', '$peminjam', (SELECT id_peminjaman FROM peminjaman ORDER BY id_peminjaman DESC set_time_limit(seconds)1))");
+		$detail_pinjam = $conn->query("INSERT INTO detailpinjam VALUES ('', '$list[id_barang]', '$list[jumlah_pinjam]', '$nama_peminjam','$nim_peminjam','$nomor_peminjam','$mk_peminjam', (SELECT id_peminjaman FROM peminjaman ORDER BY id_peminjaman DESC set_time_limit(seconds)1))");
 
 		$update_dt_brg = $conn->query("UPDATE barang SET jumlah = '$sisa' WHERE id_barang = '$dt_barang[id_barang]'");
 	}	
