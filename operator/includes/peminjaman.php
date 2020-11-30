@@ -126,16 +126,22 @@
 						<form method="POST" action="">
 							<input type="hidden" name="id_user" value="<?= $_SESSION['id_user']; ?>">
 							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="tgl-pengembalian">Tgl. Pengembalian</label>
-										<input class="form-control" type="date" name="tgl-pengembalian" id="tgl-pengembalian" required>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
+								<div class="form-row">
+									<div class="form-group col-md-6 mb-3 pr-3">
 										<label for="peminjam">Peminjam</label>
 										<input class="form-control" type="text" name="peminjam" id="peminjam" placeholder="Masukan Nama" required>
+									</div>
+									<div class="form-group col-md-6 mb-3 pr-3">
+										<label for="peminjam">NIM</label>
+										<input class="form-control" type="text" name="nim" id="nim" placeholder="Masukan NIM" required>
+									</div>
+									<div class="form-group col-md-6 mb-3 pr-3">
+										<label for="peminjam">Nomor Telpon</label>
+										<input class="form-control" type="text" name="nomor" id="nomor" placeholder="Masukan Nomor Telpon" required>
+									</div>
+									<div class="form-group col-md-6 mb-3 pr-3">
+										<label for="peminjam">Mata Kuliah</label>
+										<input class="form-control" type="text" name="mk" id="mk" placeholder="Masukan Mata Kuliah" required>
 									</div>
 								</div>
 								<div class="clearfix"></div>

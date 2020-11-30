@@ -31,12 +31,6 @@
 					<input type="number" name="jumlah" min="1" placeholder="Minimal 1" class="form-control" required value="<?= $data['jumlah'] ?>">
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="form-group">
-					<label for="ruang">Ruang</label>
-					<input type="text" name="ruang" class="form-control" required placeholder="Contoh: Gudang" value="<?= $data['ruang'] ?>">
-				</div>
-			</div>
 		</div>
 
 		<div class="row">

@@ -8,7 +8,7 @@
   <a href="javascript:history.go(-1)" class="btn btn-primary btn-sm float-left">← kembali</a>
   <div class="clearfix"></div>
 
-  <form action="proses/proses-tambah-barang.php" method="POST" class="mt-3" autocomplete="off">
+  <form action="proses/proses-tambah-barang.php?id_lab=<?php echo$_GET['id_lab'];?>" method="POST" class="mt-3" autocomplete="off">
     <div class="form-group">
       <label for="nama_barang">Nama Barang</label>
       <input type="text" name="nama_barang" placeholder="Contoh: Kursi" class="form-control" autofocus required>
@@ -18,13 +18,10 @@
       <div class="col-md-4">
  <div class="form-group">
    <label for="jenis">Jenis Barang</label>
-    <form>
       <select class="form-control" name="jenis">
         <option value="Sekali Pakai">Sekali Pakai</option>
         <option value="Berkali-kali">Berkali-kali</option>
       </select>
-    </form>
-   
  </div>
       </div>
       <div class="col-md-4">
@@ -36,18 +33,15 @@
       <div class="col-md-4">
       </div>
     </div>
-
     <div class="row">
       <div class="col-md-4">
  <div class="form-group">
    <label for="kondisi">Kondisi Barang</label>
-    <form>
       <select class="form-control" name="kondisi">
         <option value="Baik">Baik</option>
         <option value="Rusak">Rusak</option>
         <option value="Hilang">Hilang</option>
       </select>
-    </form>
  </div>
       </div>
       <div class="col-md-4">

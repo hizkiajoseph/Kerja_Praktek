@@ -4,7 +4,7 @@
 
 	<div class="clearfix"></div>
 
-	<table class="table table-sm mt-3">
+	<table class="table table-sm mt-3=">
 		<thead>
 			<tr>
 				<th>No</th>
@@ -14,7 +14,9 @@
 				<th>Tgl. Pinjam</th>
 				<th>Tgl. Kembali</th>
 				<th>Peminjam</th>
-				<th>Petugas</th>
+				<th>Nomor Telpon</th>
+				<th>Ket</th>
+				<th>Kondisi</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -29,8 +31,10 @@
 				<td><?= $data['jumlah']; ?></td>
 				<td><?= $data['tgl_pinjam']; ?></td>
 				<td><?= $data['tgl_kembali']; ?></td>
-				<td><?= $data['peminjam']; ?></td>
-				<td><?= $data['nama']; ?></td>
+				<td><?= $data['nama_peminjam']; ?></td>
+				<td><?= $data['nomor_peminjam']; ?></td>
+				<td><?= $data['nomor_peminjam']; ?></td>
+				<td><?= $data['kondisi']; ?></td>
 			</tr>
 
 			<?php endforeach; ?>

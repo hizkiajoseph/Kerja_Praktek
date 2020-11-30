@@ -1,4 +1,4 @@
-<div class="container mt-5">
+	<div class="container mt-5">
 	
 	<h2>Data Barang</h2>
 	<hr>
