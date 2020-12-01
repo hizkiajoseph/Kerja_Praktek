@@ -5,14 +5,14 @@
 			<h2>Data Peminjaman</h2>
 		</div>
 		<div class="col">
-			<a href="?p=tambah-barang&id_lab=<?php echo$_GET['id_lab'];?>" class="btn btn-primary btn-sm float-right">Pinjam Barang</a>
+			<a href="?q=tambah-peminjaman&id_lab=<?php echo$_GET['id_lab'];?>" class="btn btn-primary btn-sm float-right">Pinjam Barang</a>
 			<a href="data-peminjaman.php?act=cetak" target="_blank"><button class="btn btn-primary btn-sm float-right">Cetak</button></a>
 		</div>
 	</div>	
 
-	<div class="clearfix"></div>
+<div class="clearfix"></div>
 
-		<table class="table table-sm mt-3=">
+	<table class="table table-sm mt-3=">
 		<thead>
 			<tr>
 				<th>No</th>

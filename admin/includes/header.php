@@ -33,7 +33,7 @@
 					<a class="nav-link" href="">Riwayat</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../admin/data-petugas.php?id_lab=<?php echo$_GET['id_lab'];?>">Petugas</a>
+					<a class="nav-link" href="../admin/data-staff.php?id_lab=<?php echo$_GET['id_lab'];?>">Staff</a>
 				</li>
 			</ul>
 		</div>

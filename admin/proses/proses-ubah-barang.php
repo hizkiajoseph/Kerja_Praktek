@@ -6,26 +6,26 @@ if (!isset($_SESSION['id_user'])) {
 	header('Location: ../../index.php');
 }
 
+$id_lab = $_GET['id_lab'];
 $id = $_POST['id'];
 $nama_barang = $_POST['nama_barang'];
 $jenis = $_POST['jenis'];
 $jumlah = $_POST['jumlah'];
-$ruang = $_POST['ruang'];
 $kondisi = $_POST['kondisi'];
-$ket = $_POST['ket'];
-$tgl_regis = date('Y-m-d');
+$keterangan = $_POST['keterangan'];
+$tgl_regis = date('Y-m-d');	
 $petugas = $_SESSION['id_user'];
 
-$update = $conn->query("UPDATE barang SET nama_barang = '$nama_barang',
+$update = $conn->query("UPDATE barang SET 
+							nama_barang = '$nama_barang',
 							jenis = '$jenis',
 							jumlah = '$jumlah',
-							ruang = '$ruang',
 							kondisi = '$kondisi',
 							keterangan = '$ket'
 					WHERE id_barang = '$id'");
 
 if ($update) {
-	header('Location: ../data-barang.php');
+	header("Location: ../data-barang.php?id_lab=$id_lab");
 } else {
-	header('Location: ../data-barang.php?h=edit-barang');
+	header("Location: ../data-barang.php?p=edit-barang&id=$id&id_lab=$id_lab");
 }

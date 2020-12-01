@@ -15,7 +15,7 @@ $id = $_POST['id'];
 $update = $conn->query("UPDATE users SET nama = '$nama', username = '$username', id_level = '$sebagai' WHERE id_user = '".$id."'");
 
 if ($update) {
-	header('Location: ../data-petugas.php');
+	header('Location: ../data-staff.php');
 } else {
-	header('Location: ../data-petugas.php?h=edit-petugas');
+	header('Location: ../data-staff.php?h=edit-staff');
 }

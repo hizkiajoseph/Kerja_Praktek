@@ -16,14 +16,15 @@ $no = 1;
 
 require_once 'includes/header-dasboard.php';
 require_once 'includes/header.php';
+
 if (!isset($_GET['p'])) {
-	require_once 'includes/barang.php';	
+	require_once 'includes/daftar-barang/barang.php';	
 } else if ($_GET['p'] == 'tambah-barang') {
-	require_once 'includes/'.$_GET['p'].'.php';	
+	require_once 'includes/daftar-barang/'.$_GET['p'].'.php';	
 } else if ($_GET['p'] == 'detail-barang') {
-	require_once 'includes/'.$_GET['p'].'.php';	
+	require_once 'includes/daftar-barang/'.$_GET['p'].'.php';	
 } else if ($_GET['p'] == 'edit-barang') {
-	require_once 'includes/'.$_GET['p'].'.php';	
+	require_once 'includes/daftar-barang/'.$_GET['p'].'.php';	
 } else if ($_GET['p'] == 'hapus-barang') {
 	
 	$hapus = $conn->query("DELETE FROM barang WHERE id_barang='".$_GET['id']."'");

@@ -11,19 +11,38 @@ $sql = "SELECT b.nama_barang,b.jenis,d.jumlah_pinjam, p.tgl_pinjam, p.tgl_kembal
 $query = $conn->query($sql);
 $data_peminjaman = $query->fetch_all(MYSQLI_ASSOC);
 
+
+require_once 'proses/proses-tambah-peminjaman.php';
+
+// Mengelurkan seluruh data barang yang ada di Database
+$sql 			= "SELECT * FROM barang";
+$query 			= $conn->query($sql);
+$data_barang 	= $query->fetch_all(MYSQLI_ASSOC);
+
 // Nomor untuk increment baris tabel
 $no = 1;
 
 require_once 'includes/header-dasboard.php';
 require_once 'includes/header.php';
 
-if(!isset($_GET['act'])) {
-	require_once 'includes/detail-peminjaman.php';
-} else {
-	if($_GET['act'] == 'cetak') {
-		require_once 'includes/cetak-data-peminjaman.php';
-	} else {
-		require_once 'includes/detail-peminjaman.php';
-	}
+if (!isset($_GET['q'])) {
+	require_once 'includes/daftar-peminjaman/peminjaman.php';	
+} else if ($_GET['q'] == 'tambah-peminjaman') {
+	require_once 'includes/daftar-peminjaman/'.$_GET['q'].'.php';	
+} else if ($_GET['q'] == 'detail-peminjaman') {
+	require_once 'includes/daftar-peminjaman/'.$_GET['q'].'.php';	
+} else if ($_GET['q'] == 'edit-peminjaman') {
+	require_once 'includes/daftar-peminjaman/'.$_GET['q'].'.php';	
 }
+
+// if(!isset($_GET['act'])) {
+// 	require_once 'includes/peminjaman/peminjaman.php';
+// } else {
+// 	if($_GET['act'] == 'cetak') {
+// 		require_once 'includes/peminjaman/cetak-data-peminjaman.php';
+// 	} else {
+// 		require_once 'includes/peminjaman/detail-peminjaman.php';
+// 	}
+// }
+
 require_once 'includes/footer.php';

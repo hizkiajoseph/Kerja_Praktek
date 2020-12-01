@@ -3,7 +3,7 @@
 	<h2>Edit Data Petugas</h2>
 	<hr>
 	
-	<a href="data-petugas.php" class="btn btn-primary btn-sm float-left">&larr; Kembali</a>
+	<a href="javascript:history.go(-1)" class="btn btn-primary btn-sm float-left">&larr; Kembali</a>
 	<div class="clearfix"></div>
 
 	<?php 

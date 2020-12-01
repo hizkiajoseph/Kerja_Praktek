@@ -3,7 +3,7 @@
 	<h2>Ubah Data Barang</h2>
 	<hr>
 
-	<a href="javascript:history.go(-1)"	 class="btn btn-primary btn-sm float-left">&larr; kembali</a>
+	<a href="javascript:history.go(-1)"	class="btn btn-primary btn-sm float-left">&larr; kembali</a>
 	<div class="clearfix"></div>
 
 	<?php
@@ -43,7 +43,7 @@
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="ket">Keterangan</label>
-					<textarea class="form-control" name="ket" placeholder="(Opsional)"><?= $data['keterangan'] ?></textarea>
+					<textarea class="form-control" name="keterangan" placeholder="(Opsional)"><?= $data['keterangan'] ?></textarea>
 				</div>
 			</div>
 			<div class="col-md-4">

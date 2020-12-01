@@ -17,20 +17,20 @@ $no = 1;
 require_once 'includes/header-dasboard.php';
 require_once 'includes/header.php';
 if (!isset($_GET['h'])) {
-	require_once 'includes/petugas.php';	
-} else if ($_GET['h'] == 'tambah-petugas') {
-	require_once 'includes/'.$_GET['h'].'.php';	
-} else if ($_GET['h'] == 'detail-petugas') {
-	require_once 'includes/'.$_GET['h'].'.php';	
-} else if ($_GET['h'] == 'edit-petugas') {
-	require_once 'includes/'.$_GET['h'].'.php';	
-} else if ($_GET['h'] == 'hapus-petugas') {
+	require_once 'includes/daftar-staff/staff.php';	
+} else if ($_GET['h'] == 'tambah-staff') {
+	require_once 'includes/daftar-staff/'.$_GET['h'].'.php';	
+} else if ($_GET['h'] == 'detail-staff') {
+	require_once 'includes/daftar-staff/'.$_GET['h'].'.php';	
+} else if ($_GET['h'] == 'edit-staff') {
+	require_once 'includes/daftar-staff/'.$_GET['h'].'.php';	
+} else if ($_GET['h'] == 'hapus-staff') {
 	
 	$hapus = $conn->query("DELETE FROM users WHERE id_user ='".$_GET['id']."'");
 	if ($hapus) {
-		header('Location: data-petugas.php');
+		header('Location: data-staff.php');
 	} else {
-		header('Location: data-petugas.php');
+		header('Location: data-staff.php');
 	}
 
 }

@@ -13,14 +13,14 @@ $sebagai = $_POST['sebagai'];
 $sebagai == "Operator" ? $sebagai = 2 : 0;
 
 if (!isset($nama, $username, $password, $sebagai)) {
-	header('Location: ../petugas.php?h=tambah-petugas');
+	header('Location: ../staff.php?h=tambah-staff');
 }
 
 $sql = "INSERT INTO users VALUES ('', '$nama', '$username', '$password', '$sebagai')";
 $query = $conn->query($sql);
 
 if ($query) {
-	header('Location: ../data-petugas.php');
+	header('Location: ../data-staff.php');
 } else {
-	header('Location: ../data-petugas.php?h=tambah-petugas');
+	header('Location: ../data-staff.php?h=tambah-staff');
 }

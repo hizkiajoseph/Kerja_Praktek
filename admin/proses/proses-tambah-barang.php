@@ -24,7 +24,7 @@ $sql = "INSERT INTO barang VALUES ('','$id_user','$id_lab','$jenis','$jumlah','$
 $query = $conn->query($sql);
 
 if($query) {
-  header("Location: ../data-barang.php?id_lab=".$id_lab);
+  header("Location: ../data-barang.php?id_lab=$id_lab");
   $_SESSION['pesan'] = '<div class="alert alert-success" role="alert">Data barang ditambahkan</div>';
 } else {
   header('Location: ../data-barang.php?p=tambah-barang');

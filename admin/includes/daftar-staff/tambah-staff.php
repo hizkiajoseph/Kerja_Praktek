@@ -3,7 +3,7 @@
 	<h2>Tambah Data Petugas</h2>
 	<hr>
 	
-	<a href="data-petugas.php" class="btn btn-primary btn-sm float-left">&larr; Kembali</a>
+	<a href="javascript:history.go(-1)" class="btn btn-primary btn-sm float-left">&larr; Kembali</a>
 	<div class="clearfix"></div>
 
 	<form action="proses/proses-tambah-petugas.php" method="POST" class="mt-3" autocomplete="off">
