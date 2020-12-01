@@ -28,7 +28,7 @@
 				<td><?= $no++; ?></td>
 				<td><?= $data['nama_barang']; ?></td>
 				<td><?= $data['jenis']; ?></td>
-				<td><?= $data['jumlah']; ?></td>
+				<td><?= $data['jumlah_pinjam']; ?></td>
 				<td><?= $data['tgl_pinjam']; ?></td>
 				<td><?= $data['tgl_kembali']; ?></td>
 				<td><?= $data['nama_peminjam']; ?></td>

@@ -127,21 +127,41 @@
 							<input type="hidden" name="id_user" value="<?= $_SESSION['id_user']; ?>">
 							<div class="row">
 								<div class="form-row">
-									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="nama_peminjam">Peminjam</label>
-										<input class="form-control" type="text" name="nama_peminjam" id="nama_peminjam" placeholder="Masukan Nama" required>
+									<div class="col-md-6 mb-3 pr-3">
+										<div class="form-group">
+											<label for="tgl-kembali">Tgl. Pengembalian</label>
+											<input class="form-control" type="date" name="tgl-kembali" id="tgl-kembali" required>
+										</div>
 									</div>
-									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="nim_peminjam">NIM</label>
-										<input class="form-control" type="text" name="nim_peminjam" id="nim_peminjam" placeholder="Masukan NIM" required>
+									<div class="col-md-6 mb-3 pr-3">
+										<div class="form-group">
+											<label for="status">Status</label>
+											<input class="form-control" type="text" name="status" id="status" placeholder="Status Saatini" required>
+										</div>
 									</div>
-									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="nomor_peminjam">Nomor Telpon</label>
-										<input class="form-control" type="text" name="nomor_peminjam" id="nomor_peminjam" placeholder="Masukan Nomor Telpon" required>
+									<div class="col-md-6 mb-3 pr-3">
+										<div class="form-group">
+											<label for="nama_peminjam">Peminjam</label>
+											<input class="form-control" type="text" name="nama_peminjam" id="nama_peminjam" placeholder="Masukan Nama" required>
+										</div>
 									</div>
-									<div class="form-group col-md-6 mb-3 pr-3">
-										<label for="mk_peminjam">Mata Kuliah</label>
-										<input class="form-control" type="text" name="mk_peminjam" id="mk_peminjam" placeholder="Masukan Mata Kuliah" required>
+									<div class="col-md-6 mb-3 pr-3">
+										<div class="form-group">
+											<label for="nim_peminjam">NIM</label>
+											<input class="form-control" type="text" name="nim_peminjam" id="nim_peminjam" placeholder="Masukan NIM" required>
+										</div>
+									</div>
+									<div class="col-md-6 mb-3 pr-3">
+										<div class="form-group">
+											<label for="nomor_peminjam">Nomor Telpon</label>
+											<input class="form-control" type="text" name="nomor_peminjam" id="nomor_peminjam" placeholder="Masukan Nomor Telpon" required>
+										</div>
+									</div>
+									<div class="col-md-6 mb-3 pr-3">
+										<div class="form-group">
+											<label for="mk_peminjam">Mata Kuliah</label>
+											<input class="form-control" type="text" name="mk_peminjam" id="mk_peminjam" placeholder="Masukan Mata Kuliah" required>
+										</div>
 									</div>
 								</div>
 								<div class="clearfix"></div>
