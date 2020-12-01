@@ -18,13 +18,22 @@
 					<a class="nav-link" href="../admin/index.php">Dashboard <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="../admin/data-barang.php?id_lab=<?php echo$_GET['id_lab'];?>">Barang</a>
+					<a class="nav-link" href="../admin/data-barang.php?id_lab=<?php echo$_GET['id_lab'];?>">Daftar Barang</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">Barang Rusak</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">Barang Hilang</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../admin/data-peminjaman.php?id_lab=<?php echo$_GET['id_lab'];?>">Data Peminjaman</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">Riwayat</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="../admin/data-petugas.php?id_lab=<?php echo$_GET['id_lab'];?>">Petugas</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../admin/data-peminjaman.php">Data Peminjaman</a>
 				</li>
 			</ul>
 		</div>

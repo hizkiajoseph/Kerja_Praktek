@@ -18,16 +18,14 @@ if(isset($_POST['submit']) && isset($_SESSION['list_peminjaman'])) {
 		$tgl_pinjam = date('Y-m-d');
 		$tgl_kembali = $_POST['tgl-kembali'];
 		$status = $_POST['status'];
-		
-		$id_user = $_POST['id_user'];
-
-		$peminjaman = $conn->query("INSERT INTO peminjaman VALUES ('', '$id_user', '$tgl_pinjam','$tgl_kembali','$status')");
-
-
 		$nama_peminjam = $_POST['nama_peminjam'];
 		$nim_peminjam = $_POST['nim_peminjam'];
 		$nomor_peminjam = $_POST['nomor_peminjam'];
 		$mk_peminjam = $_POST['mk_peminjam'];
+		$id_user = $_POST['id_user'];
+
+		$peminjaman = $conn->query("INSERT INTO peminjaman VALUES ('', '$id_user', '$tgl_pinjam','$tgl_kembali','$status')");
+		
 
 		$detailpinjam = $conn->query("INSERT INTO detailpinjam VALUES ('','$list[id_barang]','$list[jumlah_pinjam]','$nama_peminjam','$nim_peminjam','$nomor_peminjam','$mk_peminjam', (SELECT id_peminjaman FROM peminjaman ORDER BY id_peminjaman DESC LIMIT 1))");	//DESC set_time_limit(seconds)1
 
