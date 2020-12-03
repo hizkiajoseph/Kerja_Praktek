@@ -20,6 +20,7 @@
 			<p>Jumlah : <?= $data['jumlah'] ?></p>
 			<p>Kondisi : <?= $data['kondisi'] ?></p>
 			<p>Tgl. Registrasi : <?= $data['tgl_regis'] ?></p>
+			<p>Keterangan : <?= $data['keterangan'] ?></p>
 		</div>
 	</div>
 

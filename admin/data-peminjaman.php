@@ -7,7 +7,7 @@ if (!isset($_SESSION['id_user'])) {
 }
 
 // ambil data
-$sql = "SELECT b.nama_barang,b.jenis,d.jumlah_pinjam, p.tgl_pinjam, p.tgl_kembali , d.nama_peminjam, d.nomor_peminjam, b.kondisi FROM detailpinjam AS d INNER JOIN barang AS b ON d.id_barang = b.id_barang INNER JOIN peminjaman AS p ON d.id_peminjaman = p.id_peminjaman INNER JOIN users AS u ON p.id_user = u.id_user";
+$sql = "SELECT b.nama_barang,b.jenis,d.jumlah_pinjam, p.tgl_pinjam, p.tgl_kembali , d.nama_peminjam, d.nomor_peminjam, d.nim_peminjam, d.mk_peminjam, b.kondisi, p.status, p.id_peminjaman FROM detailpinjam AS d INNER JOIN barang AS b ON d.id_barang = b.id_barang INNER JOIN peminjaman AS p ON d.id_peminjaman = p.id_peminjaman INNER JOIN users AS u ON p.id_user = u.id_user";
 $query = $conn->query($sql);
 $data_peminjaman = $query->fetch_all(MYSQLI_ASSOC);
 
@@ -15,7 +15,7 @@ $data_peminjaman = $query->fetch_all(MYSQLI_ASSOC);
 require_once 'proses/proses-tambah-peminjaman.php';
 
 // Mengelurkan seluruh data barang yang ada di Database
-$sql 			= "SELECT * FROM barang";
+$sql 			= "SELECT * FROM barang WHERE id_lab='1'";
 $query 			= $conn->query($sql);
 $data_barang 	= $query->fetch_all(MYSQLI_ASSOC);
 

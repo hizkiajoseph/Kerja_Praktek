@@ -127,12 +127,12 @@
 							<input type="hidden" name="id_user" value="<?= $_SESSION['id_user']; ?>">
 							<div class="row">
 								<div class="form-row">
-									<div class="col-md-6 mb-3 pr-3">
+									<!-- <div class="col-md-6 mb-3 pr-3">
 										<div class="form-group">
 											<label for="tgl-kembali">Tgl. Pengembalian</label>
 											<input class="form-control" type="date" name="tgl-kembali" id="tgl-kembali" required>
 										</div>
-									</div>
+									</div> -->
 									<div class="col-md-6 mb-3 pr-3">
 										<div class="form-group">
 											<label for="status">Status</label>

@@ -9,6 +9,7 @@
 
   <?php
   session_start();
+  session_destroy();
   // munculkan pesan error
   if(isset($_SESSION['error'])) {
 

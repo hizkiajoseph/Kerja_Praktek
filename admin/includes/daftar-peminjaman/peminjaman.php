@@ -41,9 +41,57 @@
 				<td><?= $data['tgl_kembali']; ?></td>
 				<td><?= $data['nama_peminjam']; ?></td>
 				<td><?= $data['nomor_peminjam']; ?></td>
-				<td><?= $data['nomor_peminjam']; ?></td>
+				<td>
+					<!-- Button trigger modal -->
+					<?php if($data['status']=="Dipinjam"){; ?>
+						<button type="button" class="btn-sm btn-danger" data-toggle="modal" data-target="#<?= $data['status']; ?><?= $data['id_peminjaman']; ?>">Dipinjam
+						</button>
+					<?php } else{?>
+						<button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#<?= $data['id_peminjaman']; ?><?= $data['status']; ?>">Sudah Kembali
+						</button>
+					<?php } ?>
+
+				</td>
 				<td><?= $data['kondisi']; ?></td>
 			</tr>
+
+			<!-- Modal -->
+			<div class="modal fade" id="<?= $data['status']; ?><?= $data['id_peminjaman']; ?>" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        Nama Peminjam 	: 		<?= $data['nama_peminjam']; ?>	</br>
+			        NIM Peminjam 	: 		<?= $data['nim_peminjam']; ?>		</br>
+			        No.Tlp Peminjam : 		<?= $data['nomor_peminjam']; ?> 	</br>
+			        Mata Kuliah Peminjam : 	<?= $data['mk_peminjam']; ?>	</br>
+			      </div>
+			      <div class="modal-body">
+			        Apakah peminjam sudah mengembalikan barang?
+			      <div class="modal-group">
+			      	<form action="proses/proses-ubah-ket-peminjaman.php?id_lab=<?php echo$_GET['id_lab'];?>" method="POST" class="mt-3" autocomplete="off">
+			   		<label for="jenis">Kondisi Barang</label>
+			      		<select class="form-control" name="kondisi">
+					        <option value="Baik">Baik</option>
+					        <option value="Rusak">Rusak</option>
+					        <option value="Hilang">Hilang</option>
+			      		</select>
+			      	</form>
+				  </div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+			        <button type="button" class="btn btn-primary">Iya</button>
+			      </div>
+			    </div>
+			  </div>
+			</div> 	
+
 
 			<?php endforeach; ?>
 
