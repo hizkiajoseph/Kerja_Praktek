@@ -1,10 +1,10 @@
 	<div class="container mt-1">
 	
-	<h2>Data Barang</h2>
+	<h2>Data Barang Rusak</h2>
 	<hr>
 
 	<a href="index.php" class="btn btn-primary btn-sm float-left">&larr; Kembali</a>
-	<a href="?p=tambah-barang&id_lab=<?php echo$_GET['id_lab'];?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
+	<a href="?p=tambah-barang-rusak&id_lab=<?php echo$_GET['id_lab'];?>" class="btn btn-primary btn-sm float-right">Tambah Data</a>
 
 	<div class="clearfix"></div>
 

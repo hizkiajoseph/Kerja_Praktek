@@ -6,8 +6,10 @@ if (!isset($_SESSION['id_user'])) {
 	header('Location: ../index.php');
 }
 
+require_once 'proses/proses-tambah-barang-rusak.php';
+
 // Mengelurkan seluruh data barang yang ada di Database
-$sql = "SELECT * FROM barang WHERE kondisi='Baik' AND id_lab='".$_GET['id_lab']."'";
+$sql = "SELECT * FROM barang WHERE kondisi='Rusak' AND id_lab='".$_GET['id_lab']."'";
 $query = $conn->query($sql);
 $data_barang = $query->fetch_all(MYSQLI_ASSOC);
 
@@ -18,15 +20,15 @@ require_once 'includes/header-dasboard.php';
 require_once 'includes/header.php';
 
 if (!isset($_GET['p'])) {
-	require_once 'includes/daftar-barang/barang.php';	
-} else if ($_GET['p'] == 'tambah-barang') {
-	require_once 'includes/daftar-barang/'.$_GET['p'].'.php';	
-} else if ($_GET['p'] == 'detail-barang') {
+	require_once 'includes/daftar-barang-rusak/barang-rusak.php';	
+} else if ($_GET['p'] == 'tambah-barang-rusak') {
+	require_once 'includes/daftar-barang-rusak/'.$_GET['p'].'.php';	
+} else if ($_GET['p'] == 'detail-barang-rusak') {
 	require_once 'includes/daftar-barang/'.$_GET['p'].'.php';	
 } else if ($_GET['p'] == 'edit-barang') {
-	require_once 'includes/daftar-barang/'.$_GET['p'].'.php';	
-}else if ($_GET['p'] == 'tambah-barang-ygada') {
-	require_once 'includes/daftar-barang/'.$_GET['p'].'.php';	
+	require_once 'includes/daftar-barang-rusak/'.$_GET['p'].'.php';	
+}else if ($_GET['p'] == 'tambah-barang-ygada-rusak') {
+	require_once 'includes/daftar-barang-rusak/'.$_GET['p'].'.php';	
 } else if ($_GET['p'] == 'hapus-barang') {
 	
 	$hapus = $conn->query("DELETE FROM barang WHERE id_barang='".$_GET['id']."'");

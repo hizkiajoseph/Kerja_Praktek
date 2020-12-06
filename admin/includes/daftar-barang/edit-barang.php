@@ -13,6 +13,7 @@
 
 	<form action="proses/proses-ubah-barang.php" method="POST" class="mt-3" autocomplete="off">
 		<input type="hidden" name="id" value="<?= $data['id_barang'] ?>">
+		<input type="hidden" name="id_lab" value="<?= $data['id_lab'] ?>">
 		<div class="form-group">
 			<label for="nama_barang">Nama Barang</label>
 			<input type="text" name="nama_barang" placeholder="Contoh: Kursi" class="form-control" autofocus required value="<?= $data['nama_barang'] ?>">
@@ -21,25 +22,23 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="form-group">
-					<label for="jenis">Jenis Barang</label>
-					<input type="text" name="jenis" class="form-control" required placeholder="Contoh: Kayu" value="<?= $data['jenis'] ?>">
-				</div>
+				   <label for="jenis">Jenis Barang</label>
+				      <select class="form-control" name="jenis" value="<?= $data['jenis'] ?>">
+				        <option value="Sekali Pakai">Sekali Pakai</option>
+				        <option value="Berkali-kali">Berkali-kali</option>
+				      </select>
+ 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="jumlah">Jumlah</label>
-					<input type="number" name="jumlah" min="1" placeholder="Minimal 1" class="form-control" required value="<?= $data['jumlah'] ?>">
+					<input type="number" name="jumlah" min="1" placeholder="Minimal 1" class="form-control" required value="<?= $data['jumlah'] ?>" required readonly>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-4">
-				<div class="form-group">
-					<label for="jenis">Kondisi Barang</label>
-					<input type="text" name="kondisi" class="form-control" required placeholder="Contoh: Baik" value="<?= $data['kondisi'] ?>">
-				</div>
-			</div>
+			<input type="hidden" name="kondisi" value="<?= $data['kondisi'] ?>">
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="ket">Keterangan</label>

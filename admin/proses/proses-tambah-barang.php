@@ -13,7 +13,7 @@ $jumlah = $_POST['jumlah'];
 $kondisi = $_POST['kondisi'];
 $keterangan = $_POST['keterangan'];
 $id_lab = $_GET['id_lab'];
-$tgl_regis = date('Y-m-d');
+$tgl_regis = date('Y-m-d h:i:s');
 $id_user = $_SESSION['id_user'];
 
 if(!isset($nama_barang, $jenis, $jumlah, $kondisi, $keterangan)) {

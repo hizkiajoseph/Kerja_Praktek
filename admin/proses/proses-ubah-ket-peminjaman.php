@@ -6,6 +6,10 @@ if (!isset($_SESSION['id_user'])) {
 	header('Location: ../../index.php');
 }
 
+if ($_POST['kondisi']=="rusak") {
+		
+}
+
 $id_lab 		= $_GET['id_lab'];
 $id				= $_POST['id'];
 $nama_barang 	= $_POST['nama_barang'];
@@ -16,7 +20,7 @@ $keterangan		= $_POST['keterangan'];
 $tgl_regis 		= date('Y-m-d');	
 $petugas 		= $_SESSION['id_user'];
 
-$update = $conn->query("UPDATE barang SET 
+$update_peminjaman = $conn->query("UPDATE barang SET 
 							nama_barang = '$nama_barang',
 							jenis 		= '$jenis',
 							jumlah 		= '$jumlah',

@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Administrator</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 	
@@ -15,13 +14,13 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="../admin/index.php">Dashboard <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="../admin/index.php">Beranda<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="../admin/data-barang.php?id_lab=<?php echo$_GET['id_lab'];?>">Daftar Barang</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="">Barang Rusak</a>
+					<a class="nav-link" href="../admin/data-barang-rusak.php?id_lab=<?php echo$_GET['id_lab'];?>">Barang Rusak</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="">Barang Hilang</a>
@@ -38,3 +37,9 @@
 			</ul>
 		</div>
 	</nav>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.data').DataTable();
+		});
+	</script>

@@ -97,13 +97,10 @@
 								for($i=0; $i<count($list); $i++) {
 									?>
 
-									<tr>
-										<td><?php echo $list[$i]['nama_barang']; ?></td>
-										<td align="center"><?php echo $list[$i]['jumlah_pinjam']; ?></td>
-										<td align="center">
-											<a href="?index=<?php echo $index; ?>" onclick="return confirm('Anda yakin?')">Hapus</a>
-										</td>
-									</tr>
+									<tr> <td><?php echo $list[$i]['nama_barang']; ?></td> <td
+									align="center"><?php echo $list[$i]['jumlah_pinjam']; ?></td> <td
+									align="center"> <a href="?id_lab=<?php $Get_['id_lab']; ?>" onclick="return
+									confirm('Anda yakin?')">Hapus</a> </td> </tr>
 
 									<?php 
 									$index++;
@@ -136,7 +133,11 @@
 									<div class="col-md-6 mb-3 pr-3">
 										<div class="form-group">
 											<label for="status">Status</label>
-											<input class="form-control" type="text" name="status" id="status" placeholder="Status Saatini" required>
+											      <select class="form-control" id="status" name="status">
+											        <option value="Dipinjam">Dipinjam</option>
+											        <option value="Sudah Kembali">Sudah Kembali</option>
+											      </select>
+											<!-- <input class="form-control" type="text" name="status" id="status" placeholder="Status Saatini" required> -->
 										</div>
 									</div>
 									<div class="col-md-6 mb-3 pr-3">

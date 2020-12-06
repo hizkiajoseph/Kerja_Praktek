@@ -6,7 +6,7 @@ if (!isset($_SESSION['id_user'])) {
 	header('Location: ../../index.php');
 }
 
-$id_lab = $_POST['id_lab'];
+$id_lab = $_GET['id_lab'];
 $id = $_POST['id'];
 $nama_barang = $_POST['nama_barang'];
 $jenis = $_POST['jenis'];
@@ -21,12 +21,11 @@ $update = $conn->query("UPDATE barang SET
 							jenis = '$jenis',
 							jumlah = '$jumlah',
 							kondisi = '$kondisi',
-							keterangan = '$ket',
-							id_lab = '$id_lab'
+							keterangan = '$ket'
 					WHERE id_barang = '$id'");
 
 if ($update) {
 	header("Location: ../data-barang.php?id_lab=$id_lab");
 } else {
-	header("Location: ../data-barang.php?p=edit-barang&id=$id&id_lab=$id_lab");
-}
+	header("Location: ../data-barang.php?p=edit-barang-ygada&id=$id&id_lab=$id_lab");
+}	

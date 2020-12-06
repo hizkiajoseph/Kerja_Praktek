@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container-fluid">
 
 	<div class="row">
 		<div class="col">
@@ -12,7 +12,7 @@
 
 <div class="clearfix"></div>
 
-	<table class="table table-sm mt-3=">
+	<table id="table_id"  class="table table-striped table-bordered dt-responsive nowrap">
 		<thead>
 			<tr>
 				<th>No</th>
@@ -49,7 +49,7 @@
 					<?php } else{?>
 						<button type="button" class="btn-sm btn-primary" data-toggle="modal" data-target="#<?= $data['id_peminjaman']; ?><?= $data['status']; ?>">Sudah Kembali
 						</button>
-					<?php } ?>
+					<?php } ?>  
 
 				</td>
 				<td><?= $data['kondisi']; ?></td>
@@ -66,6 +66,8 @@
 			        </button>
 			      </div>
 			      <div class="modal-body">
+			      	Nama Barang 	:		<?= $data['nama_barang']; ?>	</br>
+			      	Jumlah Barang 	:		<?= $data['jumlah_pinjam']; ?>	</br>
 			        Nama Peminjam 	: 		<?= $data['nama_peminjam']; ?>	</br>
 			        NIM Peminjam 	: 		<?= $data['nim_peminjam']; ?>		</br>
 			        No.Tlp Peminjam : 		<?= $data['nomor_peminjam']; ?> 	</br>
@@ -75,12 +77,16 @@
 			        Apakah peminjam sudah mengembalikan barang?
 			      <div class="modal-group">
 			      	<form action="proses/proses-ubah-ket-peminjaman.php?id_lab=<?php echo$_GET['id_lab'];?>" method="POST" class="mt-3" autocomplete="off">
-			   		<label for="jenis">Kondisi Barang</label>
+			   		<label for="kondisi">Kondisi Barang</label>
 			      		<select class="form-control" name="kondisi">
 					        <option value="Baik">Baik</option>
 					        <option value="Rusak">Rusak</option>
 					        <option value="Hilang">Hilang</option>
-			      		</select>
+						</select>
+						<div class="form-group">
+							<label for="kondisi_kembali">Jumlah</label>
+							<input class="form-control" type="number" name="kondisi_kembali" id="kondisi_kembali" placeholder="jumlah barang rusak atau hilang" required>
+						</div>
 			      	</form>
 				  </div>
 			      </div>
@@ -98,3 +104,24 @@
 		</tbody>
 	</table>
 </div>
+
+
+
+
+			      		
+<!-- 				      		<?php  	
+				      			switch($kondisi){
+							    case 'Baik':
+							        
+							    break;
+							    case 'Rusak':
+							        runRusakRequest();
+							    break;
+							    case 'Hilang':
+							        runValidationRequest();
+							    break;
+							    defaut:
+							        runValidationRequest();
+								}
+							?>
+ -->
