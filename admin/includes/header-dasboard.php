@@ -7,6 +7,7 @@
 	<!--  Script -->
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 	<script src = "http://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer=""></script>
+	<script src = "http://cdn.datatables.net/plug-ins/1.10.22/i18n/Indonesian-Alternative.json" defer=""></script>
 	<script type="text/javascript" src="../assets/DataTabels/media/js/jquery.dataTables.js"></script>
 	<script type="text/javascript" src="../assets/DataTabels/media/js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
@@ -14,9 +15,26 @@
 
 	<script type="text/javascript">
 		$(document).ready( function () {
-    	$('#table_id').DataTable();
-} )
+	    	$('#table_id').DataTable({
+		  		"language": {
+				    "processing": "Sedang proses...",
+				    "lengthMenu": "Tampilan _MENU_ data",
+				    "zeroRecords": "Tidak ditemukan data yang sesuai",
+				    "info": "Tampilan _START_ sampai _END_ dari _TOTAL_ barang",
+				    "infoEmpty": "Tampilan 0 hingga 0 dari 0 entri",
+				    "infoFiltered": "(disaring dari _MAX_ entri keseluruhan)",
+				    "search": "Cari:",
+				    "paginate": {
+				        "first": "Awal",
+				        "previous": "Balik",
+				        "next": "Lanjut",
+				        "last": "Akhir"
+				    }
+				} 
+			} );
+		} );
 	</script>
+
 </head>
 <body>
 		  <div class="row mt-3  mx-auto">
@@ -56,3 +74,5 @@
 			</ul>
 		</div> -->
 	</nav>
+
+

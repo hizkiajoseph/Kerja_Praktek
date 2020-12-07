@@ -9,7 +9,7 @@
             $sqlbarang = $conn->query("SELECT count(*) AS jumlah FROM barang WHERE id_lab = '$lab[id_lab]'");
             $barang = $sqlbarang->fetch_assoc();
             echo "
-            <div class='col-mb-4 m-4'>
+            <div class='col-mb-4'>
               <div class='card' style='width: 18rem;''>
                 <div class='card-body'>
                   <h5 class='card-title'>Laboratorium $lab[nama_lab]</h5>
